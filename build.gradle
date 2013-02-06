@@ -6,6 +6,19 @@ version = '1.0'
 
 repositories {
 	mavenCentral()
+	maven {
+        url "http://snapshots.openimaj.org"
+    }
+    maven {
+     	url "http://maven.openimaj.org"
+    }
+    maven {
+    	url "http://nativelibs4java.sourceforge.net/maven"
+    }
 }
 
-
+dependencies {
+    compile fileTree(dir: 'lib', include: '*.jar')
+    compile 'org.openimaj:core-video-capture:1.0.6-SNAPSHOT'
+    compile 'org.openimaj:image-processing:1.0.6-SNAPSHOT'
+}
